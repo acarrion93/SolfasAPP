@@ -19,6 +19,6 @@ public class LoginActivity extends AppCompatActivity {
 
         email =  findViewById(R.id.editTextEmail);
         email =  findViewById(R.id.editTextPass);
-        loguin = findViewById(R.id.buttonLoguin);
+        loguin = findViewById(R.id.buttonLogin);
     }
 }
