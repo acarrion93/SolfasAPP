@@ -13,6 +13,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrarUsuario extends AppCompatActivity {
 
@@ -28,6 +30,7 @@ public class RegistrarUsuario extends AppCompatActivity {
     private String password = "" ;
 
     FirebaseAuth mAuth;
+    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class RegistrarUsuario extends AppCompatActivity {
                 password = mEditTextPassword.getText().toString();
 
                 mAuth = FirebaseAuth.getInstance();
+                mDatabase = FirebaseDatabase.getInstance().getReference();
 
                 if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()){
                     if(password.length()>=6){
@@ -66,7 +70,12 @@ public class RegistrarUsuario extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
 
+
+                }else{
+                    Toast.makeText(RegistrarUsuario.this, "No se ha podido completar el registro", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
