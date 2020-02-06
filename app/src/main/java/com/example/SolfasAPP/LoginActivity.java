@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.SolfasAPP;
 
 import androidx.appcompat.app.AppCompatActivity;
 

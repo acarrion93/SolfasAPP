@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "365646694308",
+    "firebase_url": "https://solfasapp-44793.firebaseio.com",
+    "project_id": "solfasapp-44793",
+    "storage_bucket": "solfasapp-44793.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365646694308:android:35a8ac5b93954121536331",
+        "android_client_info": {
+          "package_name": "com.example.SolfasAPP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365646694308-n0q298l7pea0e8b3jvm4oakj31vqnar2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.SolfasAPP",
+            "certificate_hash": "0df1a42be28d9db628af461054ddce3fac872556"
+          }
+        },
+        {
+          "client_id": "365646694308-1o5q7kckck1a7tfcnrdo0jbrcm2rls2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcIC68YbybWnevgKLihC7kKrUJogcUOns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365646694308-1o5q7kckck1a7tfcnrdo0jbrcm2rls2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
