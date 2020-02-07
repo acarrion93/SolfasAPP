@@ -85,7 +85,7 @@
         android:layout_height="181dp"
         android:layout_marginStart="95dp"
         android:layout_marginLeft="95dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="95dp"
         android:layout_marginRight="95dp"
         app:layout_constraintEnd_toEndOf="parent"

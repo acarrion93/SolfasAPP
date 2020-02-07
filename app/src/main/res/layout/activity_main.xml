@@ -9,13 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="1500dp"
-        android:layout_height="725dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_completo" />
+        app:srcCompat="@drawable/logo_small" />
 </androidx.constraintlayout.widget.ConstraintLayout>

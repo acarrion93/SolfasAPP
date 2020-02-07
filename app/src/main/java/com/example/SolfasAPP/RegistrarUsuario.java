@@ -3,6 +3,7 @@ package com.example.SolfasAPP;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,7 @@ public class RegistrarUsuario extends AppCompatActivity {
         mEditTextPassword = findViewById(R.id.editTextPass);
         mButtonRegister = findViewById(R.id.buttonCrear);
 
+
         mButtonRegister.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -87,6 +89,8 @@ public class RegistrarUsuario extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task2) {
 
                             if (task2.isSuccessful()){
+                                startActivity(new Intent(RegistrarUsuario.this, LoginActivity.class));
+                                finish();;
                                 Toast.makeText(RegistrarUsuario.this, "Se ha registrado correctamente", Toast.LENGTH_LONG).show();
                             }else{
                                 Toast.makeText(RegistrarUsuario.this, "No se ha podido registrar el usuario", Toast.LENGTH_LONG).show();
