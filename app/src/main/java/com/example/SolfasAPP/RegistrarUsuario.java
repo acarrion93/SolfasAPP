@@ -15,6 +15,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.Registrar;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegistrarUsuario extends AppCompatActivity {
 
@@ -72,7 +76,24 @@ public class RegistrarUsuario extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("name", name);
+                    map.put("email", email);
+                    map.put("password", password);
+                    String id = mAuth.getCurrentUser().getUid();
 
+                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+
+                            if (task2.isSuccessful()){
+                                Toast.makeText(RegistrarUsuario.this, "Se ha registrado correctamente", Toast.LENGTH_LONG).show();
+                            }else{
+                                Toast.makeText(RegistrarUsuario.this, "No se ha podido registrar el usuario", Toast.LENGTH_LONG).show();
+                            }
+                        }
+
+                    });
                 }else{
                     Toast.makeText(RegistrarUsuario.this, "No se ha podido completar el registro", Toast.LENGTH_LONG).show();
                 }
